@@ -1,0 +1,74 @@
+
+.outer {
+  position: relative;
+	background: #f0f0f0;
+	height: 100vh;
+	width: 98vw;
+	margin-bottom: 30px;
+	box-shadow: 2px 2px 5px rgba(122,122,122,0.5);
+}
+
+.inner {
+    height: 116px;
+    position: absolute;
+    top: 30%;
+    margin-top: -40px;
+    font-size: 60px;
+    font-weight: bold;
+    margin-left: 40px;
+    font-family: Arial;
+}
+.content {
+	background: white;
+	min-height: 500px;
+	padding-top: 50px;
+	font-family: Arial;
+	font-size: 20px;
+	margin-left: 40px;
+	width: 95%;
+}
+a {
+	color:  black;
+	font-size: 25px;
+	position: relative;
+	line-height: 1.5;
+	text-decoration: none;
+	margin-left: 50px;
+}
+a:after {
+	display: block; /*превращаем псевдоэлемент after в блочный элемент*/
+	position: absolute;
+	left: 0; /*направление*/
+	width: 0;/*задаём длину линии до наведения курсора*/
+	height: 2px; /*задаём ширину линии*/
+	background-color: black; /*задаём цвет линии*/
+	content: "";  /*контента в данном блоке не будет поэтому в кавычках ничего не ставим*/
+	transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+a:hover:after,
+a:focus:after {
+	width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+.pictures {
+	display: flex;
+	flex-wrap: wrap;
+  justify-content: center;
+
+}
+.item {
+  width: 400px;
+  margin-right: 150px;
+  margin-left: 70px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.item img {
+  display: block;
+  width: 460px;
+  height: 420px;
+}
+.item p {
+  margin: 6px;
+  text-align: center;
+}
